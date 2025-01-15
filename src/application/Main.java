@@ -33,7 +33,7 @@ public class Main {
         Double amount = sc.nextDouble();
         account.withdraw(amount);
 
-        System.out.println("New balance: " + account.getBalance());
+        System.out.println("New balance: " + String.format("%.2f", account.getBalance()));
         }
         catch(DomainException exception){
             System.out.println(exception.getMessage());
