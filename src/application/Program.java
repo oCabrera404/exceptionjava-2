@@ -1,13 +1,13 @@
 package application;
 
 import model.entities.Account;
-import model.exceptions.DomainException;
+import model.exceptions.BusinessException;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) throws DomainException {
+public class Program {
+    public static void main(String[] args) throws BusinessException {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -35,7 +35,7 @@ public class Main {
 
         System.out.println("New balance: " + String.format("%.2f", account.getBalance()));
         }
-        catch(DomainException exception){
+        catch(BusinessException exception){
             System.out.println(exception.getMessage());
         }
         catch(Exception exception){
